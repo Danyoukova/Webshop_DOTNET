@@ -1,0 +1,28 @@
+﻿@model pe1.Webshop.Web.ViewModels.HomeIndexVm
+@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home";
+}
+
+
+
+
+
+<div class="row justify-content-around align-baseline">
+
+
+
+    @{
+        foreach (var item in Model.Items)
+        {
+            <partial name="ShowAllItemsPartial" model="@item" />
+           
+
+        }
+
+    }
+</div>
+
+<p>
+    <a href="/home" class="btn btn-primary">&laquo; Back</a>
+</p>

@@ -1,0 +1,11 @@
+﻿@model pe1.Webshop.Web.ViewModels.CollectionsIndexVm
+
+@{
+    ViewData["Title"] = "Collections";
+}
+
+@foreach (var collection in Model.Collections)
+{
+    <a class="btn alert-success" href="/collections/@collection.Id">@collection.Name</a>
+    
+}

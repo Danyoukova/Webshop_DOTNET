@@ -1,0 +1,10 @@
+﻿@model pe1.Webshop.Web.ViewModels.PropertyIndexVm
+
+@{
+    ViewData["Title"] = "Your selections";
+}
+
+@foreach (var property in Model.Properties)
+{
+    <a class="btn alert-success" href="/properties/@property.Id">@property.Name</a>
+}

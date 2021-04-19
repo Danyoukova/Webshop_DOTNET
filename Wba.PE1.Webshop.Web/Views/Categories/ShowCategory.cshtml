@@ -1,0 +1,29 @@
+﻿@model pe1.Webshop.Web.ViewModels.CategoriesDetailVm
+
+@{
+    Layout = "_Layout2";
+    ViewData["Title"] = "View categories";
+    ViewBag.Title = "Categories";
+}
+
+
+
+
+<div class="row justify-content-around align-baseline">
+
+
+
+    @{
+        foreach (var item in Model.Items)
+        {
+            <partial name="ShowAllItemsPartial" model="@item" />
+
+
+        }
+
+    }
+</div>
+
+<p>
+    <a href="/items/all" class="btn btn-primary">&laquo; Back</a>
+</p>

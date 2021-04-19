@@ -1,0 +1,27 @@
+﻿@model pe1.Webshop.Web.ViewModels.ItemsIndexVm
+
+@{
+    Layout = "_Layout2";
+    ViewData["Title"] = "All items";
+}
+
+
+
+
+<div class="row">
+
+   
+
+    @{
+        foreach (var item in Model.Items)
+        {
+
+            <partial name="ShowAllItemsPartial" model="item" />
+        }
+
+    }
+</div>
+
+<p>
+    <a href="/home" class="btn btn-primary">&laquo; Back</a>
+</p>
